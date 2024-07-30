@@ -167,8 +167,14 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\VoltServiceProvider::class,
+
+	   // Other Service Providers
+        Filament\FilamentServiceProvider::class,
     ])->toArray(),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -183,6 +189,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        // Other Aliases
+        'Filament' => Filament\Facades\Filament::class,
     ])->toArray(),
-
 ];
